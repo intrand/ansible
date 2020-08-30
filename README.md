@@ -5,7 +5,7 @@ simple ansible in docker
 # build locally
 
 ```sh
-./build 2.9.12 # or whatever version of ansible you like
+./build.sh 2.9.12 # or whatever version of ansible you like
 ```
 
 # aliases / using the containers
