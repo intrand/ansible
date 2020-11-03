@@ -8,6 +8,7 @@ RUN	apk add --no-cache \
 		libffi-dev \
 		openssl-dev \
 		openssh-client \
+		sshpass \
 		tar \
 		apg && \
 	pip3 install --no-cache-dir wheel && \
