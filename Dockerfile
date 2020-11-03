@@ -14,5 +14,8 @@ RUN	apk add --no-cache \
 	pip3 install --no-cache-dir \
 		ansible==${version} \
 		github3.py \
-		mitogen;
+		mitogen \
+		openshift \
+		PyYAML \
+		docker;
 ENTRYPOINT ["ansible-playbook"]
