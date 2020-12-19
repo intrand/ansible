@@ -18,5 +18,6 @@ RUN	apk add --no-cache \
 		mitogen \
 		openshift \
 		PyYAML \
-		docker;
+		docker \
+		jmespath;
 ENTRYPOINT ["ansible-playbook"]
