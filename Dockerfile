@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.13.1
 ARG version
 RUN	apk add --no-cache \
 		py3-pip \
@@ -10,9 +10,14 @@ RUN	apk add --no-cache \
 		openssh-client \
 		sshpass \
 		tar \
-		apg && \
-	pip3 install --no-cache-dir wheel && \
-	pip3 install --no-cache-dir \
+		apg \
+		cargo && \
+	python3 -m pip install --no-cache-dir --upgrade \
+		pip && \
+	python3 -m pip install --no-cache-dir --upgrade \
+		wheel \
+		setuptools && \
+	python3 -m pip install --no-cache-dir --upgrade \
 		ansible==${version} \
 		github3.py \
 		mitogen \
