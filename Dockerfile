@@ -11,7 +11,10 @@ RUN	apk add --no-cache \
 		sshpass \
 		tar \
 		apg \
-		cargo && \
+		cargo \
+		sudo && \
+	mkdir -p /etc/sudoers.d && \
+	printf "#0    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/0 && \
 	python3 -m pip install --no-cache-dir --upgrade \
 		pip && \
 	python3 -m pip install --no-cache-dir --upgrade \
@@ -19,6 +22,7 @@ RUN	apk add --no-cache \
 		setuptools && \
 	python3 -m pip install --no-cache-dir --upgrade \
 		ansible==${version} \
+		ansible-base=="${version}" \
 		github3.py \
 		mitogen \
 		openshift \
