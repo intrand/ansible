@@ -22,11 +22,11 @@ RUN	apk add --no-cache \
 		setuptools && \
 	python3 -m pip install --no-cache-dir --upgrade \
 		ansible==${version} \
-		ansible-base=="${version}" \
 		github3.py \
 		mitogen \
 		openshift \
 		PyYAML \
 		docker \
-		jmespath;
+		jmespath \
+		dnspython;
 ENTRYPOINT ["ansible-playbook"]
