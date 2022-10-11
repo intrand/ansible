@@ -1,4 +1,4 @@
-FROM alpine:3.14.3
+FROM alpine:3.16.2
 ARG version
 RUN	apk add --no-cache \
 		py3-pip \
