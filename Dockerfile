@@ -24,7 +24,7 @@ RUN	apk add --no-cache \
 		ansible==${version} \
 		github3.py \
 		mitogen \
-		openshift \
+		kubernetes \
 		PyYAML \
 		docker \
 		jmespath \
