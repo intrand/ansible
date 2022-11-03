@@ -15,6 +15,12 @@ RUN	apk add --no-cache \
 		sudo && \
 	mkdir -p /etc/sudoers.d && \
 	printf "#0    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/0 && \
+	printf "#500    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/500 && \
+	printf "#1000    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/1000 && \
+	chmod 0440 \
+		/etc/sudoers.d/0 \
+		/etc/sudoers.d/500 \
+		/etc/sudoers.d/1000 && \
 	python3 -m pip install --no-cache-dir --upgrade \
 		pip && \
 	python3 -m pip install --no-cache-dir --upgrade \
