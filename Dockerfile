@@ -28,6 +28,7 @@ RUN	apk add --no-cache \
 		setuptools && \
 	python3 -m pip install --no-cache-dir --upgrade \
 		ansible==${version} \
+		ansible-runner \
 		github3.py \
 		mitogen \
 		kubernetes \
@@ -35,4 +36,3 @@ RUN	apk add --no-cache \
 		docker \
 		jmespath \
 		dnspython;
-ENTRYPOINT ["ansible-playbook"]
