@@ -35,4 +35,5 @@ RUN	apk add --no-cache \
 		PyYAML \
 		docker \
 		jmespath \
-		dnspython;
+		dnspython \
+		hvac;
