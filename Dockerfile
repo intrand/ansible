@@ -12,7 +12,8 @@ RUN	apk add --no-cache \
 		tar \
 		apg \
 		cargo \
-		sudo && \
+		sudo \
+		git && \
 	mkdir -p /etc/sudoers.d && \
 	printf "#0    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/0 && \
 	printf "#500    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/500 && \
