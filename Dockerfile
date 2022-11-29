@@ -10,6 +10,8 @@ RUN	apk add --no-cache \
 		openssh-client \
 		sshpass \
 		tar \
+		zip \
+		unzip \
 		apg \
 		cargo \
 		sudo \
