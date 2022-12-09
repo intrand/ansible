@@ -39,4 +39,5 @@ RUN	apk add --no-cache \
 		docker \
 		jmespath \
 		dnspython \
-		hvac;
+		hvac \
+		proxmoxer;
