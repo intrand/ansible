@@ -12,7 +12,6 @@ env:
 
 jobs:
   buildx:
-    needs: get_info
     runs-on: ubuntu-latest
 
     permissions:
