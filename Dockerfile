@@ -24,12 +24,12 @@ RUN	apk add --no-cache \
 		/etc/sudoers.d/0 \
 		/etc/sudoers.d/500 \
 		/etc/sudoers.d/1000 && \
-	python3 -m pip install --no-cache-dir --upgrade \
+	python3 -m pip install --break-system-packages --no-cache-dir --upgrade \
 		pip && \
-	python3 -m pip install --no-cache-dir --upgrade \
+	python3 -m pip install --break-system-packages --no-cache-dir --upgrade \
 		wheel \
 		setuptools && \
-	python3 -m pip install --no-cache-dir --upgrade \
+	python3 -m pip install --break-system-packages --no-cache-dir --upgrade \
 		ansible==${version} \
 		ansible-runner \
 		github3.py \
