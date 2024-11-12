@@ -5,13 +5,13 @@ simple ansible in docker
 # build locally
 
 ```sh
-./build.sh 10.3.0 # or whatever version of ansible you like
+./build.sh 10.6.0 # or whatever version of ansible you like
 ```
 
 # aliases / using the containers
 
 ```sh
-. ./aliases.sh 10.3.0 # or whatever version of ansible you like
+. ./aliases.sh 10.6.0 # or whatever version of ansible you like
 ```
 
 ```sh

@@ -56,7 +56,7 @@ jobs:
           #   type=ref,event=tag
           #   type=semver,pattern={{ version }}
           build-args: |
-            version=10.3.0
+            version=10.6.0
       - name: build and push
         id: docker_build
         uses: docker/build-push-action@v3
@@ -65,7 +65,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ env.image_name }}
           build-args: |
-            version=10.3.0
+            version=10.6.0
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: sign
