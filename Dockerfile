@@ -6,6 +6,7 @@ RUN	apk add --no-cache \
 		gcc \
 		git \
 		gpg \
+		gpg-agent \
 		libffi-dev \
 		musl-dev \
 		openssh-client \
