@@ -1,21 +1,22 @@
 FROM alpine:3.22.1
 ARG version
 RUN	apk add --no-cache \
-		py3-pip \
-		python3-dev \
-		gcc \
-		musl-dev \
-		libffi-dev \
-		openssl-dev \
-		openssh-client \
-		sshpass \
-		tar \
-		zip \
-		unzip \
 		apg \
 		cargo \
+		gcc \
+		git \
+		gpg \
+		libffi-dev \
+		musl-dev \
+		openssh-client \
+		openssl-dev \
+		py3-pip \
+		python3-dev \
+		sshpass \
 		sudo \
-		git && \
+		tar \
+		unzip \
+		zip && \
 	mkdir -p /etc/sudoers.d && \
 	printf "#0    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/0 && \
 	printf "#500    ALL=(ALL:ALL) NOPASSWD: ALL\n" | tee /etc/sudoers.d/500 && \
